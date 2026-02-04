@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om sass | labb3</title>
+  <script type="module" src="/src/global.js"></script>
+  <script type="module" src="/src/js/sass-page/sass.js"></script>
+</head>
+
+<body>
+  <!--header + nav-->
+  <header id="header">
+    <div class="logo-icons">
+      <div>
+        <div class="hamburger hidden" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="close hidden" id="close">X</div>
+      </div>
+      <div>
+        labb3
+      </div>
+    </div>
+    <nav id="nav" class="hidden">
+      <ul>
+        <li><a href="/index">hem</a></li>
+        <li><a class="active" href="/sass">sass</a></li>
+        <li><a href="/stats10">sats10</a></li>
+        <li><a href="/statistik">statistik</a></li>
+        <li><a href="/om">om oss</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--main-->
+  <main>
+    <section>
+      <h1>SASS – utvärdering</h1>
+      <p>
+        Detta är första gången jag använder SASS. Tidigare har jag använt vanlig CSS
+        i kurser inom programmet samt i två kurser innan programmet. Jag tyckte inte att det var svårt att komma
+        igång med Sass. Det vara bara ett nytt tänkesätt att jobba modulärt, vilket jag tycker är bra.
+      </p>
+
+      <p>
+        Nedan följer en jämförelse mellan SASS och CSS. Följande
+        områden behandlas:
+      </p>
+
+      <ul>
+        <li>Variabler</li>
+        <li>Color functions (darken och lighten)</li>
+        <li>Nesting</li>
+        <li>Mixins</li>
+        <li>Selector inheritance (@extend)</li>
+        <li>If/else-satser</li>
+        <li>Partials</li>
+        <li>Filstruktur för CSS-kod</li>
+        <li>Build och optimering i Vite.js</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Variabler</h2>
+      <p>
+        I detta projekt används variabler i SASS för att lagra färgschema. Detta gör det enkelt att ändra designen på
+        ett ställe.
+      </p>
+      <p>
+        CSS har också stöd för variabler, men i detta projekt upplevdes SASS-variabler
+        som lättare att organisera tillsammans med partials och <code>@use</code>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Color functions</h2>
+      <p>
+        SASS har inbyggda färgfunktioner som <code>darken()</code> och
+        <code>lighten()</code>. Dessa används för att skapa variationer av samma färg,
+        till exempel vid hover-effekter som jag har på stats10-sidans knappar.
+      </p>
+      <p>
+        CSS kan lösa liknande saker, men ofta med mer kod och mindre tydlighet.
+      </p>
+    </section>
+
+    <section>
+      <h2>Nesting</h2>
+      <p>
+        Både SASS och modern CSS stödjer nesting. I detta projekt används nesting i
+        SASS för att samla relaterade stilar och tydligare koppla CSS till HTML-strukturen.
+      </p>
+      <p>
+        Detta gjorde koden mer lättläst i ett projekt med flera sidor.
+      </p>
+    </section>
+
+    <section>
+      <h2>Mixins</h2>
+      <p>
+        Mixins används i SASS för att återanvända kod, till exempel för flexbox-layout
+        ,media queries eller i mitt fall genom att ändra stil på bilder tillsammans med en if-sats för att bestämma hur
+        stil ska appliceras.
+      </p>
+      <p>
+        CSS saknar en motsvarighet, vilket gör mixins till en fördel
+        för att samla lika stilar och styra vad som ska appliceras.
+      </p>
+    </section>
+
+    <section>
+      <h2>Selector inheritance (@extend)</h2>
+      <p>
+        Med <code>@extend</code> kan flera selektorer dela samma grundstil.
+        Detta minskar upprepning och ger renare CSS i den färdiga builden.
+      </p>
+      <p>
+        CSS har ingen exakt motsvarighet till denna funktion, även om det går att gruppera selektorer för att dela på
+        stil är det inte riktigt samma ska eftersom sass-extends styr bättre hur stil kan delas.
+      </p>
+    </section>
+
+    <section>
+      <h2>If/else-satser</h2>
+      <p>
+        SASS stödjer villkorssatser med <code>@if</code> och <code>@else</code>.
+        Detta gör det möjligt att anpassa stilar baserat på logik. Jag har satt if-sats i min mixin för att bestämma om
+        man applicerar <code>object-fit</code> eller inte.
+      </p>
+      <p>
+        CSS saknar den logik och Sass har återigen en fördel.
+      </p>
+    </section>
+
+    <section>
+      <h2>Partials</h2>
+      <p>
+        Projektet använder flera SASS-partials där varje fil har ett ansvar,
+        variabler, mixin används i filer som behöver dem och i layout finns partials som tillhör den globala stilen.
+      </p>
+      <p>
+        Detta gör det effektivt att dela upp partials för ansvar och verkan.
+      </p>
+    </section>
+
+    <section>
+      <h2>Filstruktur för CSS-kod</h2>
+      <p>
+        SASS ger en tydlig filstruktur där CSS-koden delas upp i
+        flera mindre filer efter ansvar och vad den ska göra.
+      </p>
+      <p>
+        Detta gjorde projektet enklar att jobba med samt att felsöka jämfört med att samla all CSS
+        i en enda stor fil.
+      </p>
+    </section>
+
+    <section>
+      <h2>Build och optimering i Vite.js</h2>
+      <p>
+        När <code>npm run build</code> körs kompileras SASS till vanlig CSS som
+        minifieras och optimeras av Vite.
+      </p>
+      <p>
+        Endast den färdiga CSS-koden skickas till produktion i <code>dist</code>-mappen vilket minskar laddningstiden.
+      </p>
+    </section>
+
+    <section>
+      <h2>Sammanfattning</h2>
+      <p>
+        SASS har en högre inlärningströskel än CSS, men ger fördelar när det gäller
+        struktur, återanvändning och underhåll. Jag tycket att det fungerade bra med SASS
+        ,ES6-moduler och build-processen.
+      </p>
+    </section>
+  </main>
+  <!--footer-->
+  <footer>
+    <p>skapad av:</p>
+    <address>
+      <a href="mailto:ziba2500@student.miun.se">ziba2500@student.miun.se</a>
+    </address>
+  </footer>
+</body>
+
+</html>
