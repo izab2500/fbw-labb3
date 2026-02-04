@@ -1,0 +1,136 @@
+//funktion ex. darken är deprecated... 
+@use "../abstract/variables" as vars;
+
+%base-button {
+    width: 150px;
+    height: 40px;
+    font-size: 1.2rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 25px;
+    margin: 40px 0;
+    max-width: 500px;
+    margin-inline: auto;
+
+    >h1 {
+        text-transform: capitalize;
+    }
+
+    >form {
+
+        >label {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        >textarea {
+            width: 100%;
+            height: 80px;
+            resize: none;
+        }
+
+        >div:last-child {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+
+            .delete-btn,
+            .calculate-btn {
+                @extend %base-button
+            }
+
+            .delete-btn {
+                background-color: vars.$light-bt-danger;
+                color: whitesmoke;
+
+                &:hover {
+                    background-color: lighten(darkred, 15%);
+                    color: darken(whitesmoke, 5%);
+
+                }
+            }
+
+            .calculate-btn {
+                background-color: vars.$light-btn-blue;
+                color: white;
+
+                &:hover {
+                    background-color: lighten(midnightblue, 33%);
+                    color: darken(lightyellow, 5%);
+                }
+            }
+
+        }
+
+        .hidden {
+            display: none;
+        }
+    }
+
+    #stats {
+        align-self: flex-start;
+        width: 100%;
+
+        >div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-transform: capitalize;
+            font-size: 1.2rem;
+            border-bottom: 1px solid darkgoldenrod;
+            background-color: vars.$light-body-bg;
+            margin-bottom: 15px;
+            padding: 4px;
+
+        }
+    }
+}
+
+@media (max-width:420px) {
+    form {
+        >div:last-child {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+
+    main {
+        label {
+            color: vars.$dark-paragraph-color;
+        }
+
+        #stats {
+            align-self: flex-start;
+            width: 100%;
+
+            >div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-transform: capitalize;
+                font-size: 1.2rem;
+                border-bottom: 1px solid darkgoldenrod;
+                background-color: vars.$dark-body-bg;
+                color:vars.$dark-paragraph-color;
+                margin-bottom: 15px;
+                padding: 4px;
+
+            }
+        }
+
+        #error{
+            color:vars.$dark-paragraph-color;
+        }
+    }
+}
