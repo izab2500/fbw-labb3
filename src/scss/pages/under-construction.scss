@@ -1,0 +1,14 @@
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    >section {
+        border:2px solid goldenrod;
+        padding:25px;
+
+        >p{
+            font-size: 1.2rem;
+        }
+    }
+}
