@@ -1,0 +1,7 @@
+@mixin responsive-image($height: 100%, $use-object-fit: true) {
+  width: 100%;
+  height: $height;
+  @if $use-object-fit {
+    object-fit: cover;
+  }
+}

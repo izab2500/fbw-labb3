@@ -1,0 +1,149 @@
+@use "../abstract/variables" as vars;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    text-transform: capitalize;
+    font-size: 1.15rem;
+    background-color: vars.$light-header-footer-bg;
+
+    >.logo-icons {
+        display: flex;
+        gap: 25px;
+
+        >div:first-child {
+
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                position: relative;
+                top: 10px;
+                right: 2px;
+                cursor: pointer;
+
+                >span {
+                    width: 35px;
+                    height: 3px;
+                    background-color: black;
+                }
+            }
+
+            .close {
+                color: white;
+                font-size: 1.4rem;
+                background-color: black;
+                width: 40px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 2px;
+                position: relative;
+                bottom: -5px;
+                right: 2px;
+                cursor: pointer;
+            }
+
+            .hamburger.hidden,
+            .close.hidden {
+                display: none;
+            }
+        }
+
+
+        >div:last-child {
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            border-radius: 6px;
+        }
+    }
+
+    a {
+        color: vars.$light-link-color;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: vars.$light-link-hover;
+        }
+
+        &.active {
+            text-decoration: 1px underline black;
+            text-underline-offset: 2px;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width:680px) {
+    header {
+        position: relative;
+
+        nav {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            background-color: rgb(255, 241, 224);
+            padding: 8px;
+            border: 1px solid black;
+
+            &.hidden {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+        }
+
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: vars.$dark-header-footer-bg;
+
+        .logo-icons {
+            >div:first-child {
+                .hamburger {
+                    >span {
+                        background-color: whitesmoke;
+                    }
+                }
+            }
+        }
+
+        nav {
+            background-color: vars.$dark-header-footer-bg;
+
+            a {
+                color: vars.$dark-link-color;
+
+                &:hover {
+                    color: vars.$dark-link-hover;
+                }
+
+                &.active {
+                    text-decoration: 1px underline gold;
+
+                    &:hover {
+                        color: vars.$dark-link-color;
+                    }
+                }
+            }
+        }
+    }
+}

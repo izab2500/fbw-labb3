@@ -1,0 +1,39 @@
+@use "../abstract/variables" as vars;
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.15rem;
+    height: 60px;
+    background-color: vars.$light-header-footer-bg;
+
+    >p::first-letter {
+        text-transform: uppercase;
+    }
+
+    >p {
+        color: vars.$light-paragraph-color;
+    }
+
+    a {
+        color: vars.$light-link-color;
+        font-style: normal;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    footer {
+        background-color: vars.$dark-header-footer-bg;
+
+        p {
+            color: vars.$dark-paragraph-color;
+        }
+
+        a {
+            color: vars.$dark-link-color;
+
+        }
+    }
+}

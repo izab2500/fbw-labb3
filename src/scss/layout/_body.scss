@@ -1,0 +1,35 @@
+@use "../abstract/variables" as vars;
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: vars.$light-body-bg;
+
+    h1,
+    h2,
+    h3 {
+        color: vars.$light-heading-color;
+
+    }
+
+    p {
+        color: vars.$light-paragraph-color;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: vars.$dark-body-bg;
+
+        h1,
+        h2,
+        h3 {
+            color: vars.$dark-heading-color;
+
+        }
+
+        p {
+            color: vars.$dark-paragraph-color;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hem | labb3</title>
+  <script type="module" src="/src/global.js"></script>
+  <script type="module" src="/src/js/hem-page/hem.js"></script>
+</head>
+
+<body>
+  <!--header + nav-->
+  <header id="header">
+    <div class="logo-icons">
+      <div>
+        <div class="hamburger hidden" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="close hidden" id="close">X</div>
+      </div>
+      <div>
+        labb3
+      </div>
+    </div>
+    <nav id="nav" class="hidden">
+      <ul>
+        <li><a class="active" href="/index">hem</a></li>
+        <li><a href="/sass">sass</a></li>
+        <li><a href="/stats10">sats10</a></li>
+        <li><a href="/statistik">statistik</a></li>
+        <li><a href="/om">om oss</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--main-->
+  <main>
+    <section>
+      <h2>Vill du veta vad jag tycker om SASS?</h2>
+      <picture>
+        <source srcset="/images/sass.avif" type="image/avif">
+        <source srcset="/images/sass.webp" type="image/webp">
+        <img src="/images/sass.jpg" alt="Sass logotyp">
+      </picture>
+      <p>Jag delar mina erfarenheter med både fördelar och nackdelar, från hur det hjälpte mig organisera koden till
+        utmaningarna jag stötte på. Kolla in min SASS-sida för att läsa mer!</p>
+      <a href="/sass">gå till sass-sidan</a>
+    </section>
+    <section>
+      <h2>Vill du snabbt räkna ut deskriptiv statistik?
+      </h2>
+      <picture>
+        <source srcset="/images/statistics.avif" type="image/avif">
+        <source srcset="/images/statistics.webp" type="image/webp">
+        <img src="/images/statistics.jpg" alt="Sass logotyp">
+      </picture>
+      <p>Jag har skapat en kalkylator som hjälper dig att beräkna deskriptiv statistik på nolltid. Kolla in den
+        och testa själv!</p>
+      <a href="/stats10">gå till kalkylatorn</a>
+    </section>
+  </main>
+  <!--footer-->
+  <footer>
+    <p>skapad av:</p>
+    <address>
+      <a href="mailto:ziba2500@student.miun.se">ziba2500@student.miun.se</a>
+    </address>
+  </footer>
+</body>
+
+</html>
