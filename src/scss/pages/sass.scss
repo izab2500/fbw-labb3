@@ -1,0 +1,70 @@
+@use "../abstract/variables" as vars;
+
+main {
+    margin: 60px auto;
+
+    >section:first-child {
+
+        >h1 {
+            color: vars.$light-heading-color;
+        }
+
+        >ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            color: vars.$light-paragraph-color;
+
+            >li {
+                display: list-item;
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+
+    >section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 60px;
+
+        >h2 {
+            color: vars.$light-heading-color;
+
+        }
+
+        >p {
+            max-width: 65ch;
+            font-size: 1.2rem;
+            color: vars.$light-paragraph-color;
+
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    main {
+        >section:first-child {
+             >h1 {
+            color: vars.$dark-heading-color;
+        }
+            >ul {
+                color: vars.$dark-paragraph-color;
+
+            }
+        }
+
+        >section {
+            >h2 {
+            color: vars.$dark-heading-color;
+
+        }
+            >p {
+                color: vars.$dark-paragraph-color;
+
+            }
+        }
+
+
+    }
+}
