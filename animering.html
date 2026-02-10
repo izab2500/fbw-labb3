@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animering | labb3</title>
+    <script type="module" src="/src/global.js"></script>
+    <script type="module" src="/src/js/animering-page/animering.js"></script>
+</head>
+
+<body>
+    <!--header + nav-->
+    <header id="header">
+        <div class="logo-icons">
+            <div>
+                <div class="hamburger hidden" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="close hidden" id="close">X</div>
+            </div>
+            <div>
+                labb3
+            </div>
+        </div>
+        <nav id="nav" class="hidden">
+            <ul>
+                <li><a href="/index">hem</a></li>
+                <li><a href="/sass">sass</a></li>
+                <li><a href="/stats10">sats10</a></li>
+                <li><a href="/statistik">statistik</a></li>
+                <li><a href="/om">om oss</a></li>
+                <li><a class="active" href="/animering">animering</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--main-->
+    <main>
+    <h1>animeringar</h1>
+    <section>
+        <h2>text</h2>
+        <div class="text-container">
+            <p class="animated-text">hej, detta är en text animation.</p>
+        </div>
+    </section>
+    <section class="circle-container">
+        <h2>rörelse</h2>
+        <div class="move-circle"></div>
+    </section>
+    <section>
+        <h2>interaktion</h2>
+        <button type="button">Hovra över mig</button>
+    </section>
+    </main>
+    <!--footer-->
+    <footer>
+        <p>skapad av:</p>
+        <address>
+            <a href="mailto:ziba2500@student.miun.se">ziba2500@student.miun.se</a>
+        </address>
+    </footer>
+</body>
+
+</html>

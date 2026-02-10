@@ -13,6 +13,7 @@ export default defineConfig({
                 stats10: resolve(__dirname, "stats10.html"),
                 statistics: resolve(__dirname, "statistik.html"),
                 about: resolve(__dirname, 'om.html'),
+                animering: resolve(__dirname, 'animering.html'),
             },
         },
     },

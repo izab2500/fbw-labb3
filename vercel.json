@@ -20,6 +20,10 @@
         {
             "source": "/om",
             "destination": "/om.html"
+        },
+        {
+            "source": "/animering",
+            "destination": "/animering.html"
         }
     ]
 }
