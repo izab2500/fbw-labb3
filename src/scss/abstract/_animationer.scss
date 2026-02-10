@@ -1,0 +1,21 @@
+@keyframes animatedText {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+
+    }
+
+    100% {
+        left: 100%;
+    }
+
+}
