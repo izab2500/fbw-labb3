@@ -4,7 +4,7 @@ import './global.scss';
 //js
 import toggleMenue from './js/nav/toggleMenue'
 
-if (window.matchMedia("(max-width:800px)").matches) {
+if (window.matchMedia("(max-width:1100px)").matches) {
   //Visa eller dölj ikon och nav på mindre skrärm
   const header = document.querySelector("#header");
   const hamburgerIcon = document.querySelector("#hamburger");
