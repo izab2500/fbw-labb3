@@ -24,6 +24,14 @@
         {
             "source": "/animering",
             "destination": "/animering.html"
+        },
+        {
+            "source": "/diagram",
+            "destination": "/diagram.html"
+        },
+        {
+            "source": "/karta",
+            "destination": "/karta.html"
         }
     ]
 }

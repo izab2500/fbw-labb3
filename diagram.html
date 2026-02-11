@@ -3,11 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stats10 | labb3</title>
+  <title>Diagram | labb5</title>
   <script type="module" src="/src/global.js"></script>
-  <script type="module" src="/src/js/stats/stats10-entry.js"></script>
+  <script type="module" src="/src/js/diagram-page/diagram-entry.js"></script>
 </head>
 
 <body>
@@ -24,33 +23,27 @@
         labb3
       </div>
     </div>
-
     <nav id="nav" class="hidden">
       <ul>
-        <li><a href="/index">hem</a></li>
+        <li><a  href="/index">hem</a></li>
         <li><a href="/sass">sass</a></li>
-        <li><a class="active" href="/stats10">stats10</a></li>
+        <li><a href="/stats10">sats10</a></li>
         <li><a href="/statistik">statistik</a></li>
         <li><a href="/om">om oss</a></li>
         <li><a href="/animering">animering</a></li>
-        <li><a href="/diagram">diagram</a></li>
+        <li><a class="active" href="/diagram">diagram</a></li>
         <li><a href="/karta">karta</a></li>
       </ul>
     </nav>
   </header>
   <!--main-->
   <main>
-    <h1>statistik kalkylator</h1>
-    <form>
-      <label for="data">Skriv in tal (positiva/negativa, kommaseparerade)
-      </label>
-      <textarea name="numbers" id="data" placeholder="1,2,2.34,-45"></textarea>
-      <span id="error" class="hidden">Ange minst två positiva eller negativa tal, separerade med kommatecken.
-      </span>
-      <div><button class="delete-btn" id="delete" type="button">Radera</button><button class="calculate-btn"
-          id="calculate" type="button">Räkna</button></div>
-    </form>
-    <div id="stats">
+    <div class="chart-container">
+        <canvas id="barChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h2>5 mest sökta programmen på MIUN </h2>
+        <canvas id="pieChart"></canvas>
     </div>
   </main>
   <!--footer-->

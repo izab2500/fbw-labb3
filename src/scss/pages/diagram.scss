@@ -1,0 +1,24 @@
+main {
+    margin-inline: auto;
+    max-width: 800px;
+    width:100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .chart-container {
+        width: 100%;
+        margin-bottom:80px;
+
+        h2{
+            text-align: center;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        #barChart, #pieChart {
+            width: 100%;
+            height:100%;
+            object-fit: cover;
+        }
+    }
+}

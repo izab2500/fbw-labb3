@@ -14,6 +14,8 @@ export default defineConfig({
                 statistics: resolve(__dirname, "statistik.html"),
                 about: resolve(__dirname, 'om.html'),
                 animering: resolve(__dirname, 'animering.html'),
+                diagram: resolve(__dirname, 'diagram.html'),
+                karta: resolve(__dirname, 'karta.html'),
             },
         },
     },
