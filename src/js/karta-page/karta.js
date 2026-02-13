@@ -1,8 +1,19 @@
 import '../../scss/pages/karta.scss';
 
-//js
+
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import iconUrl from 'leaflet/dist/images/marker-icon.png';
+import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
+
+L.Marker.prototype.options.icon = L.icon({
+  iconUrl,
+  shadowUrl,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 
 /**
  * Skapar en karta och lägger in i #map-elementet.
