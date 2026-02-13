@@ -1,8 +1,6 @@
 //still för sidan diagram.html
 import "../../scss/pages/diagram.scss";
 
-//chart.js
-
 //js
 import getData from "./getData";
 import barChart from "./barChart";
