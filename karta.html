@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karta | labb5</title>
+  <script type="module" src="/src/global.js"></script>
+  <script type="module" src="/src/js/karta-page/karta.js"></script>
+</head>
+
+<body>
+  <!--header + nav-->
+  <header id="header">
+    <div class="logo-icons">
+      <div>
+        <div class="hamburger hidden" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="close hidden" id="close">X</div>
+      </div>
+      <div>
+        labb5
+      </div>
+    </div>
+    <nav id="nav" class="hidden">
+      <ul>
+        <li><a  href="/index">hem</a></li>
+        <li><a href="/sass">sass</a></li>
+        <li><a href="/stats10">sats10</a></li>
+        <li><a href="/statistik">statistik</a></li>
+        <li><a href="/om">om oss</a></li>
+        <li><a href="/animering">animering</a></li>
+        <li><a  href="/diagram">diagram</a></li>
+        <li><a class="active" href="/karta">karta</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--main-->
+  <main>
+    <form autocomplete="off">
+        <label for="search">sök plats</label>
+        <div>
+            <input type="search" id="search" name="search" placeholder="skriv en plats...">
+            <button type="button">sök</button>
+        </div>
+    </form>
+    <div id="wrapper">
+      <div id="map"></div>
+    </div>
+  </main>
+  <!--footer-->
+  <footer>
+    <p>skapad av:</p>
+    <address>
+      <a href="mailto:ziba2500@student.miun.se">ziba2500@student.miun.se</a>
+    </address>
+  </footer>
+</body>
+
+</html>
