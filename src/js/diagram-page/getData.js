@@ -1,4 +1,15 @@
-export default async function getData(url) {
+/**
+ * Hämtar data från en URL och tar fram de mest sökta kurserna och programmen på MIUN.
+ *
+ * @param {string} url - URL som datan ska hämtas från.
+ * @returns {Promise<{top6Courses: Array, top5Programs: Array}>}
+ * Ett objekt med:
+ *  - top6Courses: De 6 kurser som har flest sökande HT25.
+ *  - top5Programs: De 5 program som har flest sökande HT25.
+ *
+ * @throws {Error} Om hämtningen av data misslyckas.
+ */
+export async function getData(url) {
     try {
         const res = await fetch(url);
         if (!res.ok) throw new Error(`Det gick inte att hämta data: ${res.status}`)

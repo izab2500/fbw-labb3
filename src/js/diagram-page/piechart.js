@@ -1,6 +1,12 @@
 import Chart from 'chart.js/auto'
 
-export default function pieChart(canvasEl, arr) {
+/**
+ * Skapar ett cirkeldiagram med Chart.js.
+ *
+ * @param {HTMLCanvasElement} canvasEl - Canvas-elementet där diagrammet ska ritas.
+ * @param {Array<Object>} arr - En lista med objekt som innehåller data.
+ */
+export function pieChart(canvasEl, arr) {
     new Chart(canvasEl, {
         type: 'pie',
         data: {

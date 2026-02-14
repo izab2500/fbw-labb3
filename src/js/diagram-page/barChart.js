@@ -1,6 +1,12 @@
 import Chart from 'chart.js/auto'
 
-export default function barChart(canvasEl, arr) {
+/**
+ * Skapar ett liggande stapeldiagram med Chart.js.
+ *
+ * @param {HTMLCanvasElement} canvasEl - Canvas-elementet där diagrammet ska ritas.
+ * @param {Array<Object>} arr - En lista med objekt som innehåller kursdata.
+ */
+export function barChart(canvasEl, arr) {
     new Chart(canvasEl, {
         type: 'bar',
         data: {
