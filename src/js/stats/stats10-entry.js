@@ -2,16 +2,16 @@
 import "../../scss/pages/stats10.scss";
 
 //js-moduler
-import min from './min'
-import max from './max'
-import range from './range'
-import count from './count'
-import sum from './sum'
-import mean from './mean'
-import median from './median'
-import mode from './mode'
-import standardDeviation from './standardDeviation'
-import variance from './variance'
+import min from './min.js'
+import max from './max.js'
+import range from './range.js'
+import count from './count.js'
+import sum from './sum.js'
+import mean from './mean.js'
+import median from './median.js'
+import mode from './mode.js'
+import standardDeviation from './standardDeviation.js'
+import variance from './variance.js'
 
 //räkna statistik
   const form = document.querySelector("form");
